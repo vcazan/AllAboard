@@ -1,3 +1,10 @@
 name: AllAboard
 main: com.vcazan.allaboard.AllAboard
-version: 0.01
+version: 0.02
+commands:
+  autoboard:
+    description: Turns AllAboard Boarding On/Off
+    usage: |
+           /<command>
+           Example: /<command> | Turns AllAboard Boarding On/Off
+          

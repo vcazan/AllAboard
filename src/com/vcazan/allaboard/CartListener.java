@@ -23,7 +23,7 @@ public class CartListener extends VehicleListener {
 			Vehicle cart = event.getVehicle();
 			Entity hitWhat = event.getEntity();
 
-			if (cart.toString() == "CraftMinecart"){
+			if (cart.toString() == "CraftMinecart" && plugin.enabled){
 				cart.setPassenger(hitWhat);
 			}
 

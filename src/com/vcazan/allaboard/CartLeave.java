@@ -15,7 +15,9 @@ public class CartLeave extends VehicleListener  {
 	}
 
 	public void onVehicleExit(VehicleExitEvent event){
+		if (plugin.enabled){
 		event.getVehicle().remove();
+		}
 	}
 
 }
