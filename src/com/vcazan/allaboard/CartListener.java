@@ -25,7 +25,6 @@ public class CartListener extends VehicleListener {
 			
 
 			if (cart.toString() == "CraftMinecart" && plugin.enabled && hitWhat.toString().contains("CraftMinecart") == false){
-				log.info(hitWhat.toString());
 					cart.setPassenger(hitWhat);
 			}
 
