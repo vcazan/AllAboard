@@ -17,7 +17,7 @@ public class AllAboard extends JavaPlugin {
     Boolean enabled = true;
     
     public void onEnable(){
-		log.info("AllAboard v0.02 has loaded.");
+		log.info("AllAboard v0.03 has loaded.");
 
     	PluginManager pm = this.getServer().getPluginManager();
 

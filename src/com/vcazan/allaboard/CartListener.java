@@ -22,9 +22,11 @@ public class CartListener extends VehicleListener {
 		public void onVehicleEntityCollision(VehicleEntityCollisionEvent event){
 			Vehicle cart = event.getVehicle();
 			Entity hitWhat = event.getEntity();
+			
 
-			if (cart.toString() == "CraftMinecart" && plugin.enabled){
-				cart.setPassenger(hitWhat);
+			if (cart.toString() == "CraftMinecart" && plugin.enabled && hitWhat.toString().contains("CraftMinecart") == false){
+				log.info(hitWhat.toString());
+					cart.setPassenger(hitWhat);
 			}
 
 			
