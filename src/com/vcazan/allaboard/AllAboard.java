@@ -17,7 +17,7 @@ public class AllAboard extends JavaPlugin {
     Boolean enabled = true;
     
     public void onEnable(){
-		log.info("AllAboard v0.03 has loaded.");
+		log.info("AllAboard v0.04 has loaded.");
 
     	PluginManager pm = this.getServer().getPluginManager();
 
@@ -33,7 +33,7 @@ public class AllAboard extends JavaPlugin {
     
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
     	 
-    	 if(cmd.getName().equalsIgnoreCase("autoboard")){ // If the player typed /basic then do the following...
+    	 if(cmd.getName().equalsIgnoreCase("autoboard")){
     	   if (sender.isOp()){
     		   if (enabled){
     			   sender.sendMessage("AllAboard is now disabed");
@@ -45,7 +45,7 @@ public class AllAboard extends JavaPlugin {
     		   }
     	   }
     	   return true;
-    	 } //If this has happened the function will break and return true. if this hasn't happened the a value of false will be returned.
+    	 }
     	 return false; }
     
 }
