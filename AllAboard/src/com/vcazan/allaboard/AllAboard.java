@@ -4,7 +4,6 @@ import java.util.logging.Logger;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,9 +20,9 @@ public class AllAboard extends JavaPlugin {
 
     	PluginManager pm = this.getServer().getPluginManager();
 
-    		pm.registerEvent(Event.Type.VEHICLE_EXIT, cartLeave, Event.Priority.Normal,this);
-    		pm.registerEvent(Event.Type.VEHICLE_COLLISION_ENTITY, cartListener, Event.Priority.Normal,this);
-
+    	pm.registerEvents(this.cartListener, this);
+    	pm.registerEvents(this.cartLeave, this);
+    	
     }
     
     public void onDisable(){
