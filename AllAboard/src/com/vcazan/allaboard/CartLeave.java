@@ -2,10 +2,11 @@ package com.vcazan.allaboard;
 
 import java.util.logging.Logger;
 
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.vehicle.VehicleExitEvent;
-import org.bukkit.event.vehicle.VehicleListener;
 
-public class CartLeave extends VehicleListener  {
+public class CartLeave implements Listener  {
 	
 	public static AllAboard plugin;
     Logger log = Logger.getLogger("Minecraft");
@@ -14,6 +15,7 @@ public class CartLeave extends VehicleListener  {
 		plugin = instance;
 	}
 
+	@EventHandler
 	public void onVehicleExit(VehicleExitEvent event){
 		if (plugin.enabled){
 		event.getVehicle().remove();

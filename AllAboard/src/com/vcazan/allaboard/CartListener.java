@@ -4,11 +4,12 @@ import java.util.logging.Logger;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Vehicle;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.vehicle.VehicleEntityCollisionEvent;
-import org.bukkit.event.vehicle.VehicleListener;
 
 
-public class CartListener extends VehicleListener {
+public class CartListener implements Listener {
 
 		public final AllAboard plugin;
 		
@@ -19,6 +20,7 @@ public class CartListener extends VehicleListener {
 			this.plugin = instance;
 		}
 
+		@EventHandler
 		public void onVehicleEntityCollision(VehicleEntityCollisionEvent event){
 			Vehicle cart = event.getVehicle();
 			Entity hitWhat = event.getEntity();
